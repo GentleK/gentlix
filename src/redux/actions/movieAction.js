@@ -1,6 +1,8 @@
 import { moviesActions } from '../reducers/moviesReducer'
 import api from '../api';
 
+const { apiKey } = process.env.REACT_APP_API_KEY;
+
 function setLoading(loading) {
     return (dispatch) => {
         dispatch(moviesActions.getMoviesRequest({ loading }));
@@ -14,7 +16,6 @@ function setMovieId(id) {
 }
 
 function getMovies() {
-    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));
@@ -39,7 +40,6 @@ function getMovies() {
 }
 
 function getMovie(id) {
-    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));
@@ -66,7 +66,6 @@ function getMovie(id) {
 }
 
 function searchMovies(searchConditions) {
-    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));

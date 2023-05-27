@@ -2,6 +2,7 @@ import { moviesActions } from '../reducers/moviesReducer'
 import api from '../api';
 
 const { apiKey } = process.env.REACT_APP_API_KEY;
+console.log("============= apiKey :", apiKey);
 
 function setLoading(loading) {
     return (dispatch) => {

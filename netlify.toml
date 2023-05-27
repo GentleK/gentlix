@@ -1,6 +1,0 @@
-[build]
-    command = "CI=false npm run build"
-    publish = "build"
-
-[context.production.environment]
-    REACT_APP_API_KEY = '458b913b67ff451ea72316e6ad429e85'

@@ -14,7 +14,7 @@ function setMovieId(id) {
 }
 
 function getMovies() {
-    const apiKey = context.production.environment.REACT_APP_API_KEY
+    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));
@@ -39,7 +39,7 @@ function getMovies() {
 }
 
 function getMovie(id) {
-    const apiKey = context.production.environment.REACT_APP_API_KEY
+    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));
@@ -66,7 +66,7 @@ function getMovie(id) {
 }
 
 function searchMovies(searchConditions) {
-    const apiKey = context.production.environment.REACT_APP_API_KEY
+    const apiKey = process.env.REACT_APP_API_KEY
     return async (dispatch) => {
         try {
             dispatch(moviesActions.getMoviesRequest({ loading: true }));

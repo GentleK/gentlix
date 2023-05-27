@@ -1,0 +1,16 @@
+{
+    "profile":[
+        {
+            "id":"temp_user",
+            "password":"1231",
+            "name":"임시유저",
+            "grade":1
+        },
+        {
+            "id":"kkh019",
+            "password":"1231",
+            "name":"김기홍",
+            "grade":2
+        }
+    ]
+}
